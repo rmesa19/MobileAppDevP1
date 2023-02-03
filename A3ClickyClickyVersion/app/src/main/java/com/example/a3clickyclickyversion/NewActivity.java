@@ -23,7 +23,7 @@ public class NewActivity extends AppCompatActivity {
         buttonD = findViewById(R.id.buttonD);
         buttonE = findViewById(R.id.buttonE);
         buttonF = findViewById(R.id.buttonF);
-        textBox = findViewById(R.id.textView);
+        textBox = findViewById(R.id.pre);
 
 
         buttonA.setOnClickListener(

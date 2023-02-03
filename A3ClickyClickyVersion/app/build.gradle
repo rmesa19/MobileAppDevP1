@@ -3,6 +3,20 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\rmesa\\AndroidStudioProjects\\KeyHolder\\A3Keyv2.jks')
+            storePassword 'Key12345'
+            keyAlias 'keyA3v2'
+            keyPassword 'Key12345'
+        }
+        release {
+            storeFile file('C:\\Users\\rmesa\\AndroidStudioProjects\\KeyHolder\\A3Keyv2.jks')
+            storePassword 'Key12345'
+            keyAlias 'keyA3v2'
+            keyPassword 'Key12345'
+        }
+    }
     namespace 'com.example.a3clickyclickyversion'
     compileSdk 33
 
@@ -14,6 +28,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
     }
 
     buildTypes {
