@@ -20,8 +20,14 @@ public class MainActivity extends AppCompatActivity {
         btn1 = findViewById(R.id.button);
         btn2 = findViewById(R.id.button2);
 
-        btn1.setOnClickListener(view -> Toast.makeText(MainActivity.this, "Rodolph Mesadieu\nmesadieu.r@northeastern.edu",
-                Toast.LENGTH_SHORT).show());
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent aboutIntent = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(aboutIntent);
+            }
+        });
+
         btn2.setOnClickListener(new View.OnClickListener(){
 
             @Override

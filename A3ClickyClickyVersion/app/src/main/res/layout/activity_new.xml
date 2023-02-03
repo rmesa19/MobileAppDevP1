@@ -26,7 +26,7 @@
                 android:layout_margin="12dp"
                 android:layout_weight="1"
                 android:padding="16dp"
-                android:text="@string/A_button" />
+                android:text="A" />
 
             <Button
                 android:id="@+id/buttonB"
@@ -35,7 +35,7 @@
                 android:layout_margin="12dp"
                 android:layout_weight="1"
                 android:padding="16dp"
-                android:text="@string/B_button" />
+                android:text="B" />
 
             <Button
                 android:id="@+id/buttonC"
@@ -44,7 +44,7 @@
                 android:layout_margin="12dp"
                 android:layout_weight="1"
                 android:padding="16dp"
-                android:text="@string/C_button" />
+                android:text="C" />
 
         </LinearLayout>
 
@@ -60,7 +60,7 @@
                 android:layout_margin="12dp"
                 android:layout_weight="1"
                 android:padding="16dp"
-                android:text="@string/D_button" />
+                android:text="D" />
 
             <Button
                 android:id="@+id/buttonE"
@@ -69,7 +69,7 @@
                 android:layout_margin="12dp"
                 android:layout_weight="1"
                 android:padding="16dp"
-                android:text="@string/E_button" />
+                android:text="E" />
 
             <Button
                 android:id="@+id/buttonF"
@@ -78,7 +78,7 @@
                 android:layout_margin="12dp"
                 android:layout_weight="1"
                 android:padding="16dp"
-                android:text="@string/F_button" />
+                android:text="F" />
 
         </LinearLayout>
 
@@ -86,7 +86,7 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="Pressed:"
             android:gravity="center"
             android:padding="16dp"/>
 
