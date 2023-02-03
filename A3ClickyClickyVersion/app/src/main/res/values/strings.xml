@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">A3ClickyClickyVersion</string>
+    <string name="about_me_button_text">About Me</string>
+    <string name="A_button"> A </string>
+    <string name="B_button"> B </string>
+    <string name="C_button"> C </string>
+    <string name="D_button"> D </string>
+    <string name="E_button"> E </string>
+    <string name="F_button"> F </string>
+    <string name="textBox">Pressed:</string>
+    <string name="pressedButton"> - </string>
+</resources>
