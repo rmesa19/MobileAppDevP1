@@ -9,4 +9,11 @@
     <string name="F_button"> Pressed:F </string>
     <string name="textBox">Pressed:</string>
     <string name="pressedButton"> - </string>
+    <string name="myInfo">
+        <ul>
+            <li>Rodolph Mesadieu</li>
+            <li>Northeastern University</li>
+            <li>CS 5330</li>
+        </ul>
+    </string>
 </resources>
