@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn1, btn2, linkCollector;
+    Button btn1, btn2, btnA5, linkCollector;
 
 
     @Override
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         btn1 = findViewById(R.id.button);
         btn2 = findViewById(R.id.button2);
         linkCollector = findViewById(R.id.linkButton);
+        btnA5 = findViewById(R.id.A5button);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +47,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LinkActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        btnA5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent A5intent = new Intent(MainActivity.this, )
             }
         });
     }

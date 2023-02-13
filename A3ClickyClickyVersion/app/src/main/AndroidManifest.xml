@@ -12,6 +12,9 @@
         android:theme="@style/Theme.A3ClickyClickyVersion"
         tools:targetApi="31">
         <activity
+            android:name=".PrimeActivity"
+            android:exported="false" />
+        <activity
             android:name=".LinkActivity"
             android:exported="false" />
         <activity

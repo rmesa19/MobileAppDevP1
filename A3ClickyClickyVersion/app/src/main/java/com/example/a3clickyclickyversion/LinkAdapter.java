@@ -1,5 +1,8 @@
 package com.example.a3clickyclickyversion;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +16,11 @@ import java.util.List;
 public class LinkAdapter extends RecyclerView.Adapter<LinkAdapter.LinkViewHolder> {
 
     private List<Link> links;
+    private Context context;
 
-    public LinkAdapter(List<Link> links) {
+    public LinkAdapter(List<Link> links, Context context) {
         this.links = links;
+        this.context = context;
     }
 
     @NonNull
@@ -30,6 +35,13 @@ public class LinkAdapter extends RecyclerView.Adapter<LinkAdapter.LinkViewHolder
         Link link = links.get(position);
         holder.linkName.setText(link.getName());
         holder.linkUrl.setText(link.getUrl());
+        holder.itemView.setOnClickListener(v -> {
+            if (v.isPressed()) {
+                // Start an intent to launch the URL in a web browser
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link.getUrl()));
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -37,7 +49,7 @@ public class LinkAdapter extends RecyclerView.Adapter<LinkAdapter.LinkViewHolder
         return links.size();
     }
 
-    static class LinkViewHolder extends RecyclerView.ViewHolder {
+    class LinkViewHolder extends RecyclerView.ViewHolder {
 
         TextView linkName;
         TextView linkUrl;
