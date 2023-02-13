@@ -53,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
         btnA5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent A5intent = new Intent(MainActivity.this, )
+                Intent A5intent = new Intent(MainActivity.this, PrimeActivity.class);
+                startActivity(A5intent);
             }
         });
     }
