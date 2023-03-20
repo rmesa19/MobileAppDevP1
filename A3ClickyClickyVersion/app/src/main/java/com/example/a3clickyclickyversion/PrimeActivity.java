@@ -3,6 +3,8 @@ package com.example.a3clickyclickyversion;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -91,6 +93,26 @@ public class PrimeActivity extends AppCompatActivity {
         outState.putLong(CURRENT_NUMBER, currentNumber);
         outState.putBoolean(PACIFIER_SWITCH, pacifierSwitchCheckbox.isChecked());
         super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (workerThread != null && workerThread.isAlive()) {
+            new AlertDialog.Builder(this)
+                    .setTitle("Terminate Search?")
+                    .setMessage("Are you sure you want to terminate the search?")
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            workerThread.interrupt();
+                            PrimeActivity.this.finish();
+                        }
+                    })
+                    .setNegativeButton("No", null)
+                    .show();
+        } else {
+            super.onBackPressed();
+        }
     }
 
     @Override
