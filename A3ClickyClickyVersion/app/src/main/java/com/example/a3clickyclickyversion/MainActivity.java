@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         btn2 = findViewById(R.id.button2);
         linkCollector = findViewById(R.id.linkButton);
         btnA5 = findViewById(R.id.A5button);
+        location = findViewById(R.id.location);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
