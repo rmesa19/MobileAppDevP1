@@ -1,5 +1,4 @@
 package com.example.a3clickyclickyversion;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -19,7 +18,7 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 
-public class LocationActivity extends AppCompatActivity {
+public class LocationActivity2 extends AppCompatActivity {
 
     FusedLocationProviderClient fusedLocationProviderClient;
     TextView latitude, longitude, distanceTraveled;
@@ -38,7 +37,7 @@ public class LocationActivity extends AppCompatActivity {
         longitude = findViewById(R.id.longitude);
         distanceTraveled = findViewById(R.id.distanceTraveled);
         reset = findViewById(R.id.reset);
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(LocationActivity.this);
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(LocationActivity2.this);
         new Thread() {
             public void run() {
                 while (true) {
@@ -69,7 +68,7 @@ public class LocationActivity extends AppCompatActivity {
 
     private void getLastLocation(){
 
-        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
             fusedLocationProviderClient.getLastLocation()
                     .addOnSuccessListener(new OnSuccessListener<Location>() {
                         @Override
@@ -98,7 +97,7 @@ public class LocationActivity extends AppCompatActivity {
 
 
     private void askPermission() {
-        ActivityCompat.requestPermissions(LocationActivity.this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
+        ActivityCompat.requestPermissions(LocationActivity2.this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
     }
 
     @Override
@@ -107,7 +106,7 @@ public class LocationActivity extends AppCompatActivity {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
                 getLastLocation();
             }else {
-                Toast.makeText(LocationActivity.this,"Permission Required",Toast.LENGTH_SHORT).show();
+                Toast.makeText(LocationActivity2.this,"Permission Required",Toast.LENGTH_SHORT).show();
             }
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
